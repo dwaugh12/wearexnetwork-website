@@ -17,7 +17,8 @@ No contact form. The only contact detail is the email address shown as text: xne
 - `assets/style.css` — Black + gold styles
 - `assets/logo-nav.svg` — horizontal white logo for the header
 - `assets/logo.svg` / `assets/mark.svg` — stacked / mark versions for dark grounds
-- `assets/grok-bot.jpg` — Grok Bot mascot (hero and About)
+- `assets/grok-bot.svg` — Grok Bot mascot (hero and About; web copy of the compressed JPEG)
+- `assets/grok-bot.jpg` — compressed JPEG kept in the local draft folder
 
 ## Preview locally
 From this folder:
