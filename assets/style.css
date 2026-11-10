@@ -1,5 +1,5 @@
 /* X Network Ltd — wearexnetwork.co.uk draft
-   Black + gold. Do not publish. Prices TBC by Dave. */
+   Black + gold. Do not publish. */
 :root {
   --bk: #0b0b0b;
   --ink: #000000;
@@ -26,7 +26,7 @@ body {
   flex-direction: column;
 }
 
-h1, h2, h3, .brand, .nav a, .btn, .kicker, .motto, .step-num {
+h1, h2, h3, .brand, .nav a, .btn, .kicker, .motto, .step-num, .plan-price, .plan-badge {
   font-family: Montserrat, Inter, system-ui, sans-serif;
 }
 
@@ -297,6 +297,96 @@ footer .motto { font-size: 0.95rem; margin: 0 0 14px; }
 
 footer p + p { margin-top: 8px; }
 
+
+.onboard {
+  margin-top: 40px;
+}
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 36px;
+  align-items: stretch;
+}
+
+.plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan.popular {
+  border-color: var(--gd);
+  padding-top: 34px;
+}
+
+.plan-badge {
+  position: absolute;
+  top: -11px;
+  left: 24px;
+  background: var(--gd);
+  color: var(--ink);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px 10px;
+}
+
+.plan-price {
+  color: var(--gd);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  margin: 10px 0 6px;
+}
+
+.plan-price span {
+  display: inline-block;
+  margin-left: 4px;
+  color: var(--mu);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.plan ul, .onboard ul {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.plan li, .onboard li {
+  color: var(--mu);
+  font-size: 0.95rem;
+  padding: 8px 0 8px 1.1em;
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+
+.plan li::before, .onboard li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.95em;
+  width: 6px;
+  height: 6px;
+  background: var(--gd);
+  border-radius: 50%;
+}
+
+.fineprint {
+  margin-top: 36px;
+  color: var(--mu);
+  font-size: 0.88rem;
+  max-width: 46rem;
+  line-height: 1.7;
+}
+
+.fineprint p + p { margin-top: 10px; }
+
 @media (max-width: 860px) {
   .hero { text-align: center; padding: 72px 20px 64px; }
   .hero-inner {
@@ -316,6 +406,7 @@ footer p + p { margin-top: 8px; }
   }
   .about-intro .lead { margin-left: auto; margin-right: auto; }
   .mascot-sm { width: 140px; }
+  .plans { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
